@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject losePannel;
     public GameObject winPannel;
     public GameObject pausePannel;
+    public GameObject joystick;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +18,16 @@ public class GameManager : MonoBehaviour
     }
     void Won()
     {
+        joystick.SetActive(false);
         Time.timeScale = 0;
         winPannel.SetActive(true);
     }    
     void Failed()
     {
+        joystick.SetActive(false);
         Time.timeScale = 0;
         losePannel.SetActive(true);
+
     }
     
     public void NextLevel()
@@ -48,10 +52,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         pausePannel.SetActive(true);
+        joystick.SetActive(false);
     }
     public void Continue()
     {
         Time.timeScale = 1;
         pausePannel.SetActive(false);
+        joystick.SetActive(true);
     }
 }

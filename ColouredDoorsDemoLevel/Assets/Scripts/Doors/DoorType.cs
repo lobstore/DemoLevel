@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class DoorType : MonoBehaviour
 {
-  public Colours.Colour colour;
-    
+    public Colours.Colour colour;
 }
