@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private Animator animatorController;
     public Colours.Colour colour;
     private PlayerController controller;
-    private ParticleSystem particleSystem;
+   new private ParticleSystem particleSystem;
     private Rigidbody2D rb;
     private void Start()
     {
